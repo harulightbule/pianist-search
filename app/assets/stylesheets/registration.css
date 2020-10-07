@@ -1,0 +1,51 @@
+
+
+.pianist-content {
+  text-align: center;
+  background-color: #E5E7E8;
+  margin: 0 160px;
+}
+
+.heading-name {
+  padding: 40px;
+}
+
+
+
+.click-upload {
+  padding-left: 90px;
+}
+
+p {
+  font-size: 10px;
+}
+
+.small-field {
+  margin-bottom: 40px;
+  padding-right: 90px;
+  padding-bottom: 10px;
+}
+
+.form-text {
+  display: block;
+  padding-right: 100px;
+}
+
+/*.large-field {
+  padding-right: 40px;
+  padding-bottom: 40px;
+  margin-left: 130px;
+  margin-bottom: 40px;
+}*/
+
+.url-field {
+  margin-left: 90px;
+  margin-bottom: 40px;
+}
+
+.registration {
+  background-color: black;
+  color: white;
+  padding: 20px 40px;
+  margin: 40px 0px;
+}

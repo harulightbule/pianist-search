@@ -1,0 +1,52 @@
+
+
+.pianist-show {
+  text-align: center;
+}
+
+.pianist-name {
+  margin: 40px;
+}
+
+.item-img-content {
+  background-color: #E5E7E8;
+  margin: 0 500px;
+  margin-bottom: 40px;
+  height: 200px;
+
+}
+
+.detail-table {
+  border: 1px solid black;
+  margin: 0 250px;
+}
+
+.detail-item {
+  border: 1px solid black;
+  padding-bottom: 50px;
+  padding-right: 40px;
+  background-color: black;
+  color: white;
+}
+
+.detail-value {
+  border: 1px solid black;
+  padding-bottom: 60px;
+}
+
+.dm {
+  color: white;
+  background-color: black;
+  margin: 20px;
+  padding: 0 40px;
+}
+
+.large-field {
+  padding-bottom: 40px;
+  padding-right: 90px;
+}
+
+.send {
+background-color: black;
+color: white;
+}
