@@ -6,9 +6,15 @@
     </div>
      <div class="navbar">
        <ul class="nav-lists">
-         <li>新規登録</li>
-         <li>ログイン</li>
-         <li>伴奏者登録</li>
+       <% if user_signed_in? %>
+       <li class="menu"><%= link_to current_user.name, class:"login-name" %></li>
+       <li class="menu"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"logout" %></li>
+       <li class="menu"><%= link_to '伴奏者登録', '#', class:"sign-pianist" %></li>
+       <%else%>
+       <li class="menu"><%= link_to 'ログイン', new_user_session_path, class:"login" %> </li>
+       <li class="menu"><%= link_to '新規登録', new_user_registration_path, class:"sign-up" %></li>
+       <li class="menu"><%= link_to '伴奏者登録', '#', class:"sign-pianist" %></li>
+       <% end %>
        </ul>
      </div>      
     </header>
@@ -21,29 +27,57 @@
       <p class="explanation-top">伴奏者探しに困っていませんか<br>オンラインで伴奏者を見つけましょう</p>
       </div>
       <div class="image-diagram">
-        <img src="images/singing.png" alt="歌っている人イラスト" class="top-image">
+        <img src="images/singing.png" alt="歌っている人" class="top-image" >
       </div>
     </div>
 
     <!-- 伴奏者一覧-->
-    <div class= "pianist-list">
+    <div class= "pianist-lists">
       <!-- 検索フォーム-->
       <div class="search-form">
         <input type="text" placeholder="伴奏者を検索する" class="small-field">
         <input type="submit" value="検索" class="search">
+         <p class="piano-content">伴奏者一覧</p>
+        <ul class='piano-lists'>
+        <!--%if @pianists.exists? %-->
+        <%# @pianists.each do |pianist| %>
+        <%#= link_to item_path(item.id), method: :get do %>
+        <li class="status">
+        <div class='pianist-img-content'>
+         <%#= image_tag pianist.image, class: "item-img" %>
+        </div>
+       <div class='pianist-name'>
+            <%#= pianist.name %>
       </div>
-      <div class="pianist">
-        <p class="pianist-content">伴奏者一覧</p>
+      <div class="pianist-area">
+          <%#= pianist.area%>
       </div>
-      
-
+      </li>
+      </ul>
+     <%# end %>
+     <%# else %>
+     <ul class='piano-lists'>
+     <li class="status">
+     <div class="pianist-img-content">
+     <%#= image_tag "#", class:"pianist-image"%>
+     </div>
+     <div class='pianist-name'>
+      伴奏者として登録してみませんか
+      </div>
+      <div class="pianist-area">
+        <span>愛知県、岐阜県</span>
+      </div>
+      <%# end %>
+      </li>
+      </ul>      
+      </div>
     </div>
     
       
       
       
-</body>
+
     <footer>
       <p class="copy-right">Copyright(C) PianistSearch ALL RIGHTS RESERVED.</p>
     </footer>
-  
+  </body>
