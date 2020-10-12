@@ -1,7 +1,10 @@
+<%= form_with model: @pianist, url: pianists_path, local: true do |f| %>
 
 
 <div class="pianist-content">
      <h2 class="heading-name">伴奏者情報入力</h2>
+     <%= render 'layouts/error_messages', model: f.object %>
+
      <div class="img-upload">
       <label class="form-text">顔写真 必須</label>
      </div>
@@ -9,45 +12,52 @@
         <p>
           クリックしてファイルをアップロード
         </p>
-        <input type="text" placeholder="ファイルを選択" class="small-field">
-        <!--%= f.file_field :image, id:"item-image" %-->
+        <!--input type="text" placeholder="ファイルを選択" class="small-field"-->
+        <%= f.file_field :image, id:"pianist-image" %>
      </div>
     
 
     <div class="school-form">
       <label class="form-text">学歴 必須</label>
-      <textarea placeholder="〇〇音楽大学 ピアノ科 2016年卒業" class="large-field"></textarea>
+      <!--textarea placeholder="〇〇音楽大学 ピアノ科 2016年卒業(1,000文字まで)" class="large-field"></textarea-->
+      <%= f.text_area :school, class:"large-field", id:"pianist-school", placeholder:"〇〇音楽大学 ピアノ科 2016年卒業(1,000文字まで)", maxlength: 1000 %>
     </div>
 
     <div class="repert-form">
       <label class="form-text">レパートリー(作曲者,曲名を入力してください) 必須</label>
-      <textarea placeholder="例)作曲者:モーツァルト,曲名:恋とはどんなものかしら" class="large-field"></textarea>
+      <!--textarea placeholder="例)作曲者:モーツァルト,曲名:恋とはどんなものかしら" class="large-field"></textarea-->
+       <%= f.text_area :repert, class:"large-field", id:"pianist-repert", placeholder:"例)作曲者:モーツァルト,曲名:恋とはどんなものかしら(4,000文字まで)", maxlength: 4000 %>
     </div>
 
     <div class="area-form">
       <label class="form-text">活動地域 必須</label>
-      <textarea placeholder="例)愛知県、岐阜県" class="large-field"></textarea>
+      <!--textarea placeholder="例)愛知県、岐阜県" class="large-field"></textarea-->
+      <%= f.text_area :area, class:"large-field", id:"pianist-area", placeholder:"例)愛知県、岐阜県(1,000文字まで)", maxlength: 1000 %>
     </div>
 
     <div class="money-form">
       <label class="form-text">伴奏依頼金 必須</label>
-      <textarea placeholder="例)伴奏合わせ、1回3000円" class="large-field"></textarea>
+      <!--textarea placeholder="例)伴奏合わせ、1回3000円" class="large-field"></textarea-->
+      <%= f.text_area :money, class:"large-field", id:"pianist-money", placeholder:"例)伴奏合わせ、1回3000円(1,000文字まで)", maxlength: 1000 %>
     </div>
 
     <div class="video-form">
       <label class="form-text">紹介動画 任意</label>
-      <input type="text" placeholder="youtubeのURL等" class="url-field">
+      <!--input type="text" placeholder="youtubeのURL等" class="url-field"-->
+      <%= f.text_area :video, class:"url-field", id:"pianist-video", placeholder:"youtubeのURL等(1,000文字まで)", maxlength: 1000 %>
     </div>
 
     <div class="letter-form">
       <label class="form-text">伴奏者からメッセージ 任意</label>
-      <textarea placeholder="例)よろしくお願いします" class="large-field"></textarea>
+      <!--textarea placeholder="例)よろしくお願いします" class="large-field"></textarea-->
+       <%= f.text_area :message, class:"large-field", id:"pianist-message", placeholder:"例)よろしくお願いします(4,000文字まで)", maxlength: 4000 %>
     </div>
 
     <div class="registration-click">
-    <input type="submit" value="登録する" class="registration">
+    <!--input type="submit" value="登録する" class="registration"-->
+    <%= f.submit "登録する", class:"registration" %>
     </div>
 </div>
-
+<% end %>
   
 
