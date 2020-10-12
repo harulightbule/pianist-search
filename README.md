@@ -22,7 +22,6 @@
 | Column   | Type   | Options     |
 | -------- | -----  | ----------  |
 | school   | text   | null: false |
-| birthday | date   | null: false |
 | repert   | text   | null: false |
 | area     | string | null: false |
 | money    | text   | null: false |
