@@ -3,4 +3,10 @@ ja:
    attributes:
      user:
        name: 名前
+     pianist:
+        image: 画像
+        school: 学歴
+        repert: レパートリー
+        area: 活動地域
+        money: 伴奏依頼金
      
