@@ -53,7 +53,7 @@
 
   <%# if @pianist.pianist_user.blank? %>
    <% if user_signed_in? && current_user.id == @pianist.user_id %>
-   <%= link_to '伴奏者情報の編集', "#", method: :get, class: "pianist-black-btn" %>
+   <%= link_to '伴奏者情報の編集', edit_pianist_path, method: :get, class: "pianist-black-btn" %>
   <%#edit_item_path(@item.id)#%>
   <p class='or-text'>or</p>
   <%= link_to '削除', "#", method: :delete, class:'pianist-destroy' %>
