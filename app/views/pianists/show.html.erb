@@ -56,7 +56,7 @@
    <%= link_to '伴奏者情報の編集', edit_pianist_path, method: :get, class: "pianist-black-btn" %>
   <%#edit_item_path(@item.id)#%>
   <p class='or-text'>or</p>
-  <%= link_to '削除', "#", method: :delete, class:'pianist-destroy' %>
+  <%= link_to '削除', pianist_path(@pianist.id), method: :delete, class:'pianist-destroy' %>
   <%# item_path(@item.id)#%>
     <% else %>
     <div class="dm-button">
@@ -89,7 +89,8 @@
       <!--% end %-->
     </div>
   </div>
-
+  <%= link_to 'トップページに戻る', pianists_path, class:"top-pianist" %>
+  
 
 </div>
 
