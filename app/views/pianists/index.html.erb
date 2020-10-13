@@ -32,46 +32,50 @@
     </div>
 
     <!-- 伴奏者一覧-->
-    <div class= "pianist-lists">
-      <!-- 検索フォーム-->
-      <div class="search-form">
-        <input type="text" placeholder="伴奏者を検索する" class="small-field">
+    <div class="search-form">
+    <input type="text" placeholder="伴奏者を検索する" class="small-field">
         <input type="submit" value="検索" class="search">
-         <p class="piano-content">伴奏者一覧</p>
+    </div>
+    <div class= "pianist-contents">
+      <!-- 検索フォーム-->
+         <p class="subtitle">伴奏者一覧</p>
         <ul class='piano-lists'>
-        <!--%if @pianists.exists? %-->
-        <%# @pianists.each do |pianist| %>
-        <%#= link_to item_path(item.id), method: :get do %>
-        <li class="status">
+        <%#if @pianists.exists? %>
+        <% @pianists.each do |pianist| %>
+        <li class="list">
+        <%#= link_to '#', method: :get do %>
+         <!--item_path(item.id)-->
         <div class='pianist-img-content'>
-         <%#= image_tag pianist.image, class: "item-img" %>
+         <%= image_tag pianist.image.variant(resize:'200x200') if pianist.image.attached?%>
         </div>
-       <div class='pianist-name'>
-            <%#= pianist.name %>
-      </div>
-      <div class="pianist-area">
-          <%#= pianist.area%>
-      </div>
-      </li>
-      </ul>
-     <%# end %>
-     <%# else %>
-     <ul class='piano-lists'>
-     <li class="status">
-     <div class="pianist-img-content">
-     <%#= image_tag "#", class:"pianist-image"%>
-     </div>
-     <div class='pianist-name'>
-      伴奏者として登録してみませんか
-      </div>
-      <div class="pianist-area">
-        <span>愛知県、岐阜県</span>
+       <div class='pianist-info'>
+            <h3 class='pianist-name'>
+            <%= pianist.user.name %>
+            </h3>
+         <div class="pianist-area">
+           <%= pianist.area%>
+         </div>
       </div>
       <%# end %>
       </li>
+      <% end %>
+     <%# else %>
+     <%#li class='list'>
+     <%#= link_to image_tag("grand-piano_illust_4023.png", class:"pianist-image"), "/"%>
+     <%#div class='pianist-info'#%>
+     <%#h3 class='pianist-name'#%>
+      <%#伴奏者として登録してみませんか#%>
+      <%#/h3#%>
+      <%#div class="pianist-area"#%>
+        <%#span>愛知県、岐阜県</span#%>
+      <%#/div#%>
+      <%#/div#%>
+      <%# end #%>
+      <%#/li#%>
+      <%# end #%>
       </ul>      
-      </div>
     </div>
+  
     
       
       

@@ -2,6 +2,8 @@ class PianistsController < ApplicationController
   before_action :move_to_index, except: :index
 
 def index
+  @pianists = Pianist.order('created_at DESC')
+
 end
 
 def new
