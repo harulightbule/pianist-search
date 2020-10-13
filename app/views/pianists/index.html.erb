@@ -43,7 +43,7 @@
         <%#if @pianists.exists? %>
         <% @pianists.each do |pianist| %>
         <li class="list">
-        <%#= link_to '#', method: :get do %>
+        <%= link_to pianist_path(pianist.id), method: :get do %>
          <!--item_path(item.id)-->
         <div class='pianist-img-content'>
          <%= image_tag pianist.image.variant(resize:'200x200') if pianist.image.attached?%>
@@ -56,7 +56,7 @@
            <%= pianist.area%>
          </div>
       </div>
-      <%# end %>
+      <% end %>
       </li>
       <% end %>
      <%# else %>
