@@ -24,6 +24,19 @@ def show
   @pianist = Pianist.find(params[:id])
 end
 
+def edit
+  @pianist = Pianist.find(params[:id])
+end
+
+def update
+  @pianist = Pianist.find(params[:id])
+  if @pianist.update(pianist_params)
+        redirect_to action: :show
+  else
+    render :edit
+  end
+end
+
 private
 
 def pianist_params
