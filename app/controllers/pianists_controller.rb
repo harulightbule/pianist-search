@@ -37,6 +37,15 @@ def update
   end
 end
 
+def destroy
+  @pianist = Pianist.find(params[:id])
+  if @pianist.destroy
+    redirect_to action: :index
+  else
+    rendeer :show
+  end
+end
+
 private
 
 def pianist_params
