@@ -12,6 +12,9 @@ header {
   font-size: 10px;
 }
 
+.title {
+  font-size: 15px;
+}
 
 
 .navbar {
@@ -85,18 +88,25 @@ header {
   margin-left: 80px;
   margin-top: 40px;
 }
-.pianist-lists {
-  height: 800px;
+
+.pianist-contents {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.search-form {
-  margin-top: 10px;
-  text-align: center;
+
+.piano-lists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.piano-content{
+
+/*.piano-content{
   font-size: 25px;
-}
+}*/
 
 
 .search-form {
@@ -104,16 +114,21 @@ header {
   text-align: center;
 }
 
+.search {
+  background-color: black;
+  color: white;
+}
 
+.subtitle {
+  font-size: 20px;
+}
 
 
 .pianist-img-content {
-  background-color: #E5E7E8;
-  height: 50px;
-  
+  position: relative;
 }
 
-.piano-lists {
+/*.piano-lists {
 display: flex;
   flex-direction: column;
   align-items: center;
@@ -125,6 +140,16 @@ display: flex;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}*/
+
+.pianist-area {
+  padding-left: 50px;
+}
+
+
+.pianist-image {
+  height: 200px;
+  width: 200px;
 }
 
 footer{
