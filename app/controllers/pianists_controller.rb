@@ -20,6 +20,10 @@ def create
   end
 end
 
+def show
+  @pianist = Pianist.find(params[:id])
+end
+
 private
 
 def pianist_params
