@@ -1,54 +1,69 @@
 
   
 <div class="pianist-show">
-    <h3 class="pianist-name">山田太郎</h3>
-  
-
-  <div class='item-img-content'>写真
-    <!--%= image_tag @item.image, class:"item-box-img" %-->
+    <div class="pianist-box">
+    <h3 class="pianist-name">
+     <%= @pianist.user.name %>
+    </h3>
+  <div class='item-img-content'>
+    <%= image_tag @pianist.image.variant(resize:'200x200'), class:"item-box-img" %>
+  </div>
   </div>
 
   <table class="detail-table">
     <tbody>
       <tr>
         <th class="detail-item">学歴</th>
-        <td class="detail-value">〇〇音楽大学 ピアノ科 2010年卒業</td>
-        <!--%= @item.user.nickname %-->
+        <td class="detail-value">
+        <%= @pianist.school %>
+        </td>
       </tr>
       <tr>
         <th class="detail-item">レパートリー</th>
         <td class="detail-value">
-          作曲者:モーツァルト,曲名:恋とはどんなものかしら
-          作曲者:プッチーニ,曲名:私のお父さん
+          <%= @pianist.repert %>
         </td>
-        <!--%= @item.category.name %-->
       </tr>
       <tr>
         <th class="detail-item">活動地域</th>
-        <td class="detail-value">愛知県,岐阜県</td>
-        <!--%= @item.status.name %-->
+        <td class="detail-value">
+        <%= @pianist.area %>
+        </td>
       </tr>
       <tr>
         <th class="detail-item">伴奏依頼金</th>
-        <td class="detail-value">合わせ 一回3000円</td>
-        <!--%= @item.delivery_fee.name %-->
+        <td class="detail-value">
+        <%= @pianist.money %>
+        </td>
       </tr>
       <tr>
         <th class="detail-item">動画URL</th>
-        <td class="detail-value">http/...</td>
-        <!--%= @item.area.name %-->
+        <td class="detail-value">
+        <%= @pianist.video %>
+        </td>
       </tr>
       <tr>
         <th class="detail-item">伴奏者からメッセージ</th>
-        <td class="detail-value">お願いします</td>
-        <!--%= @item.day.name %-->
+        <td class="detail-value">
+        <%= @pianist.message %>
+        </td>
       </tr>
     </tbody>
   </table>
 
-  <div class="dm-button">
+  <%# if @pianist.pianist_user.blank? %>
+   <% if user_signed_in? && current_user.id == @pianist.user_id %>
+   <%= link_to '伴奏者情報の編集', "#", method: :get, class: "pianist-black-btn" %>
+  <%#edit_item_path(@item.id)#%>
+  <p class='or-text'>or</p>
+  <%= link_to '削除', "#", method: :delete, class:'pianist-destroy' %>
+  <%# item_path(@item.id)#%>
+    <% else %>
+    <div class="dm-button">
   <input type="submit" value="DMを送る" class="dm">
   </div>
+  <% end %>
+  <%# end %>
 
   <div class="container">
     <h4 class="comment-name">評価、お礼メッセージを送る</h4>
