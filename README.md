@@ -71,10 +71,10 @@ belongs_to :room
 
 # comments テーブル
 
-| Column   | Type      | Options                        |
-| user     | reference | null: false, foreign_key: true |
-| pianist  | reference | null: false, foreign_key: true |
-| comment  | text      | null: false                    |
+| Column   | Type      | Options           |
+| user     | reference | foreign_key: true |
+| pianist  | reference | foreign_key: true |
+| text     | text      |                   |
 
 ### Association
 
