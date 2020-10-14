@@ -1,5 +1,5 @@
 class PianistsController < ApplicationController
-  before_action :move_to_index, except: :index
+  before_action :move_to_index, except: [:index, :search]
 
 def index
   @pianists = Pianist.order('created_at DESC')
@@ -44,6 +44,10 @@ def destroy
   else
     rendeer :show
   end
+end
+
+def search
+  @pianists = Pianist.search(params[:keyword])
 end
 
 private
