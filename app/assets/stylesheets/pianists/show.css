@@ -74,8 +74,18 @@
 .dm {
   color: white;
   background-color: black;
-  margin: 20px;
+  margin: 5px;
   padding: 0 40px;
+}
+
+.container {
+  background-color:#E5E7E8;
+  padding: 0 100px;
+  margin: 50px 0;
+}
+
+.comment-name {
+  margin: 30px 0 ;
 }
 
 .large-field {
@@ -91,4 +101,8 @@ color: white;
 .top-pianist {
   background-color: black;
   color: white;
+}
+
+.comments {
+  margin: 20px 0 ;
 }

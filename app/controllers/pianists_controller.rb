@@ -1,5 +1,5 @@
 class PianistsController < ApplicationController
-  before_action :move_to_index, except: [:index, :search]
+  before_action :move_to_index, except: [:index, :search, :show]
 
 def index
   @pianists = Pianist.order('created_at DESC')
@@ -22,6 +22,8 @@ end
 
 def show
   @pianist = Pianist.find(params[:id])
+  @comment = Comment.new
+  @comments = @pianist.comments.includes(:user)
 end
 
 def edit
