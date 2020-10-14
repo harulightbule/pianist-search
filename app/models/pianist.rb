@@ -10,4 +10,12 @@ class Pianist < ApplicationRecord
     validates :money
   end
 
+def self.search(search)
+  if search != ""
+    Pianist.where('area LIKE(?)', "%#{search}%")
+  else
+     Pianist.all
+  end
+end
+
 end
