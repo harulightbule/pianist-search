@@ -66,27 +66,27 @@
   <%# end %>
 
   <div class="container">
-    <h4 class="comment-name">評価、お礼メッセージを送る</h4>
-    <textarea placeholder="コメントする" class="large-field"></textarea>
-    <input type="submit" value="送信" class="send">
-    <!--% if current_user %-->
-      <!--%= form_with(model: [@tweet, @comment], local: true) do |form| %-->
-        <!--%= form.text_area :text, placeholder: "コメントする", rows: "2" %-->
-        <!--%= form.submit "SEND" %-->
-      <!--% end %-->
-    <!--% else %-->
+    <h4 class="comment-name">〈評価、お礼メッセージを送る〉</h4>
+    <%#textarea placeholder="コメントする" class="large-field"></textarea#%>
+    <%#input type="submit" value="送信" class="send"#%>
+    <% if current_user %>
+      <%= form_with(model: [@pianist, @comment], local: true) do |form| %>
+        <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
+        <%= form.submit "送信" %>
+      <% end %>
+    <% else %>
       <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
-    <!--% end %-->
+    <%end %>
     <div class="comments">
       <h4>＜コメント一覧＞</h4>
-      <!--% if @comments %-->
-        <!--% @comments.each do |comment| %-->
+      <% if @comments %>
+        <% @comments.each do |comment| %>
           <p>
-            <strong>田中花子<!--%= link_to comment.user.nickname, "/users/#{comment.user_id}" %--></strong>
-            <!--%= comment.text %-->ありがとうございます
+            <strong><%= link_to comment.user.name, "/users/#{comment.user_id}" %></strong>
+            <%= comment.text %>
           </p>
-        <!--% end %-->
-      <!--% end %-->
+        <% end %>
+      <% end %>
     </div>
   </div>
   <%= link_to 'トップページに戻る', pianists_path, class:"top-pianist" %>
