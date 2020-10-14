@@ -1,5 +1,4 @@
-
-  <body>
+<body>
     <header>
       <div class="heading">
         <h1 class="title">声楽家のための<br>PianistSearch</h1>
@@ -42,7 +41,7 @@
     </div>
     <div class= "pianist-contents">
       <!-- 検索フォーム-->
-         <p class="subtitle">伴奏者一覧</p>
+         <p class="subtitle">検索結果</p>
         <ul class='piano-lists'>
         <%#if @pianists.exists? %>
         <% @pianists.each do |pianist| %>
@@ -80,7 +79,7 @@
       </ul>      
     </div>
   
-    
+    <%= link_to '伴奏者一覧に戻る', pianists_path, class:"menu" %>
       
       
       
