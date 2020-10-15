@@ -1,9 +1,10 @@
 
 
 header {
-  height: 70px;
+  height: 80px;
   padding: 10px 0;
   display: flex;
+  background-color: #E5E7E8
 }
 
 .heading {
@@ -39,33 +40,37 @@ header {
 .login {
   color: white;
   padding-bottom: 10px;
+  text-decoration: none ;
 }
 
 .login-name {
   color: white;
+  text-decoration: none ;
 }
 
 .logout {
   color: white;
+  text-decoration: none ;
 }
 
 .sign-up {
   color: white;
+  text-decoration: none ;
 }
 
 .sign-pianist {
   color:white;
+  text-decoration: none ;
 }
 
 .black-bar {
- height: 50px;
+ height: 20px;
  background-color: black;
- margin-top: 10px;
 }
 
 .description {
-  height: 150px;
-  background-color:#DCE1E3;
+  height: 300px;
+  background-color: #E5E7E8;
   display:flex;
 }
 
@@ -74,7 +79,7 @@ header {
 }
 
 .explanation-top {
-  margin: 30px;
+  margin: 90px 0 0 50px;
   font-size: 20px;
 }
 
@@ -82,11 +87,13 @@ header {
   display: flex;
 }
 
+
+
 .top-image {
-  height: 80px;
-  width: 80px;
-  margin-left: 80px;
-  margin-top: 40px;
+  height: 300px;
+  width: 500px;
+  margin-left: 200px;
+  margin-top: 2px;
 }
 
 .pianist-contents {
@@ -104,14 +111,24 @@ header {
 }
 
 
-/*.piano-content{
-  font-size: 25px;
-}*/
+.pianist-contents {
+  background-image: url("/assets/greyfloral.png");
+  height: 500px;
+}
+
+.pianist-name {
+  text-decoration: none;
+  color: black;
+  padding-right: 40px;
+}
+
 
 
 .search-form {
-  margin-top: 10px;
+  /*margin: 10px 0;*/
   text-align: center;
+  background-image: url("/assets/greyfloral.png");
+  padding:30px 0;
 }
 
 .search {
@@ -145,6 +162,7 @@ display: flex;
 
 .pianist-area {
   padding-left: 50px;
+  color: black
 }
 
 
@@ -163,3 +181,15 @@ footer{
   color: white;
 }
 
+.sub {
+  margin-bottom: 20px;
+}
+
+.back-top {
+  text-align: center;
+  text-decoration: none ;
+  background-color: black;
+  color: white;
+  margin-top: 50px;
+
+}

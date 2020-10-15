@@ -6,7 +6,7 @@
      <%= @pianist.user.name %>
     </h3>
   <div class='item-img-content'>
-    <%= image_tag @pianist.image.variant(resize:'200x200'), class:"item-box-img" %>
+    <%= image_tag @pianist.image.variant(resize:'300x300'), class:"item-box-img" %>
   </div>
   </div>
 
@@ -94,7 +94,7 @@
   
 
 
-  <%= link_to 'トップページに戻る', pianists_path, class:"top-pianist" %>
+  <%= link_to('トップページに戻る', pianists_path, class:"top-pianist")%>
   
 
 </div>

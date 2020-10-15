@@ -7,13 +7,13 @@
      <div class="navbar">
        <ul class="nav-lists">
        <% if user_signed_in? %>
-       <li class="menu"><%= link_to current_user.name, class:"login-name" %></li>
-       <li class="menu"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"logout" %></li>
-       <li class="menu"><%= link_to '伴奏者登録',   new_pianist_path, class:"sign-pianist" %></li>
+       <li class="menu"><%= link_to(current_user.name, class:"login-name")%></li>
+       <li class="menu"><%= link_to('ログアウト', destroy_user_session_path, method: :delete, class:"logout")%></li>
+       <li class="menu"><%= link_to('伴奏者登録',   new_pianist_path, class:"sign-pianist")%></li>
        <%else%>
-       <li class="menu"><%= link_to 'ログイン', new_user_session_path, class:"login" %> </li>
-       <li class="menu"><%= link_to '新規登録', new_user_registration_path, class:"sign-up" %></li>
-       <li class="menu"><%= link_to '伴奏者登録', new_pianist_path, class:"sign-pianist" %></li>
+       <li class="menu"><%= link_to('ログイン', new_user_session_path, class:"login")%> </li>
+       <li class="menu"><%= link_to('新規登録', new_user_registration_path, class:"sign-up")%></li>
+       <li class="menu"><%= link_to('伴奏者登録', new_pianist_path, class:"sign-pianist")%></li>
        <% end %>
        </ul>
      </div>      
@@ -27,12 +27,12 @@
       <p class="explanation-top">伴奏者探しに困っていませんか<br>オンラインで伴奏者を見つけましょう</p>
       </div>
       <div class="image-diagram">
-        <img src="images/singing.png" alt="歌っている人" class="top-image" >
+        <img src="/assets/pianolady.jpg" alt="pianist" class="top-image ">
       </div>
     </div>
 
     <!-- 伴奏者一覧-->
-    <div class="search-form">
+    <div class="search-contents">
     <%= form_with url: search_pianists_path, local: true, method: :get, class: "search-form" do |form|%>
     <%= form.text_field :keyword, placeholder: "活動地域から検索", class: "search-input" %>
     <%#input type="text" placeholder="伴奏者を検索する" class="small-field"#%>
@@ -43,7 +43,7 @@
     <div class= "pianist-contents">
       <!-- 検索フォーム-->
          <p class="subtitle">伴奏者一覧</p>
-         <p>(詳細を見るには新規登録又はログインが必要です)</p>
+         <p class="sub">(詳細を見るには新規登録又はログインが必要です)</p>
         <ul class='piano-lists'>
         <%#if @pianists.exists? %>
         <% @pianists.each do |pianist| %>
@@ -80,7 +80,6 @@
       <%# end #%>
       </ul>      
     </div>
-  
     
       
       
