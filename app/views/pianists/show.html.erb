@@ -51,33 +51,23 @@
     </tbody>
   </table>
 
-  <%# if @pianist.pianist_user.blank? %>
    <% if user_signed_in? && current_user.id == @pianist.user_id %>
-   <%= link_to '伴奏者情報の編集', edit_pianist_path, method: :get, class: "pianist-black-btn" %>
-  <%#edit_item_path(@item.id)#%>
+   <%= link_to('伴奏者情報の編集', edit_pianist_path, method: :get, class: "pianist-black-btn")%>
   <p class='or-text'>or</p>
-  <%= link_to '削除', pianist_path(@pianist.id), method: :delete, class:'pianist-destroy' %>
-  <%# item_path(@item.id)#%>
+  <%= link_to('削除', pianist_path(@pianist.id), method: :delete, class:'pianist-destroy')%>
     <% else %>
    <div class="pianist-form">
     <h3 class=form-name>伴奏を依頼したい方はこちらのフォームに記載して下さい</h3>
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdUfk-cwuXkuf8x2cRXiHGCLdORpkrd5aJkV8yW01jX265ANg/viewform?embedded=true" width="640" height="826" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
     </div>      
   <% end %>
-  <%# end %>
 
   <div class="container">
     <h4 class="comment-name">〈評価、お礼メッセージを送る〉</h4>
-    <%#textarea placeholder="コメントする" class="large-field"></textarea#%>
-    <%#input type="submit" value="送信" class="send"#%>
-    <%# if current_user %>
       <%= form_with(model: [@pianist, @comment], local: true) do |form| %>
         <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
         <%= form.submit "送信" %>
       <% end %>
-    <%# else %>
-      <%#strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong#%>
-    <%#end %>
     <div class="comments">
       <h4>＜コメント一覧＞</h4>
       <% if @comments %>

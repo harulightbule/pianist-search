@@ -35,21 +35,16 @@
     <div class="search-contents">
     <%= form_with url: search_pianists_path, local: true, method: :get, class: "search-form" do |form|%>
     <%= form.text_field :keyword, placeholder: "活動地域から検索", class: "search-input" %>
-    <%#input type="text" placeholder="伴奏者を検索する" class="small-field"#%>
-        <%#input type="submit" value="検索" class="search"#%>
          <%= form.submit "検索", class: "search-btn" %>
          <% end %>
     </div>
     <div class= "pianist-contents">
-      <!-- 検索フォーム-->
          <p class="subtitle">伴奏者一覧</p>
          <p class="sub">(詳細を見るには新規登録又はログインが必要です)</p>
         <ul class='piano-lists'>
-        <%#if @pianists.exists? %>
         <% @pianists.each do |pianist| %>
         <li class="list">
         <%= link_to pianist_path(pianist.id), method: :get do %>
-         <!--item_path(item.id)-->
         <div class='pianist-img-content'>
          <%= image_tag pianist.image.variant(resize:'200x200') if pianist.image.attached?%>
         </div>
@@ -64,20 +59,6 @@
       <% end %>
       </li>
       <% end %>
-     <%# else %>
-     <%#li class='list'>
-     <%#= link_to image_tag("grand-piano_illust_4023.png", class:"pianist-image"), "/"%>
-     <%#div class='pianist-info'#%>
-     <%#h3 class='pianist-name'#%>
-      <%#伴奏者として登録してみませんか#%>
-      <%#/h3#%>
-      <%#div class="pianist-area"#%>
-        <%#span>愛知県、岐阜県</span#%>
-      <%#/div#%>
-      <%#/div#%>
-      <%# end #%>
-      <%#/li#%>
-      <%# end #%>
       </ul>      
     </div>
     
