@@ -31,13 +31,6 @@ p {
   padding-right: 100px;
 }
 
-/*.large-field {
-  padding-right: 40px;
-  padding-bottom: 40px;
-  margin-left: 130px;
-  margin-bottom: 40px;
-}*/
-
 .url-field {
   margin-left: 90px;
   margin-bottom: 40px;
@@ -48,4 +41,8 @@ p {
   color: white;
   padding: 20px 40px;
   margin: 40px 0px;
+}
+
+.error-message {
+  list-style: none;
 }
