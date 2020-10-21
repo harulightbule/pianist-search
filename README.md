@@ -46,7 +46,7 @@
 - belongs_to :pianist
 
 # ER図  
-[![Image from Cacco](https://cacoo.com/diagrams/Reuhbi8Qq18sxDaT-71427.png)]  
+[![Image from Gyazo](https://i.gyazo.com/5d19b3a41d4883c915a67f34c55f38ff.png)](https://gyazo.com/5d19b3a41d4883c915a67f34c55f38ff)  
 
 # アプリケーションの概要
 声楽家がコンサートやレッスン等でピアノの伴奏者が必要な際に伴奏者を探す事が出来る、  
@@ -255,29 +255,29 @@
 ## 伴奏者情報詳細表示機能  
 ### 登録した伴奏者情報を伴奏者一覧の画像又は名前、活動地域をクリックすると  
 ### 詳細ページに移動し閲覧する事が出来る↓  
-[![Image from Gyazo](https://i.gyazo.com/dacbde17108a976d6db99afdc32ad807.gif)](https://gyazo.com/dacbde17108a976d6db99afdc32ad807)  
+[![Image from Gyazo](https://i.gyazo.com/552b883f16ac25e164dbbef7161b3839.gif)](https://gyazo.com/552b883f16ac25e164dbbef7161b3839)  
 
 ## 伴奏者情報編集機能  
 ### 登録している伴奏者本人が自身の詳細ページに移動すると情報の編集が出来る↓  
-[![Image from Gyazo](https://i.gyazo.com/d02669b9a8f6046c4aa2885c6097686b.gif)](https://gyazo.com/d02669b9a8f6046c4aa2885c6097686b)  
+[![Image from Gyazo](https://i.gyazo.com/bd580793b1998ba918100c38acaee391.gif)](https://gyazo.com/bd580793b1998ba918100c38acaee391)  
 
 ## 伴奏者情報消去機能  
 ### 登録している伴奏者本人が自身の詳細ページに移動すると消去が出来る↓  
-[![Image from Gyazo](https://i.gyazo.com/30010a7a8dde2f0f15facf60d004a106.gif)](https://gyazo.com/30010a7a8dde2f0f15facf60d004a106)  
+[![Image from Gyazo](https://i.gyazo.com/e9118dcf23b771cc4b04fb32443bb9fd.gif)](https://gyazo.com/e9118dcf23b771cc4b04fb32443bb9fd)  
 
 ## 伴奏者活動地域検索機能  
 ### トップページの検索欄から伴奏者の活動地域を検索出来る↓  
-[![Image from Gyazo](https://i.gyazo.com/2d6ae0f9998e5132070fcdbb9806ee26.gif)](https://gyazo.com/2d6ae0f9998e5132070fcdbb9806ee26)  
+[![Image from Gyazo](https://i.gyazo.com/205acf34b46f863d86c51ed605609c12.gif)](https://gyazo.com/205acf34b46f863d86c51ed605609c12)  
 
 ## エラーメッセージの日本語化  
 ### 新規登録、ログイン、伴奏者登録画面で必須の項目が不足していると  
 ### エラーメッセージが表示される↓  
 * 新規登録画面  
-[![Image from Gyazo](https://i.gyazo.com/ae0072d2de194bd659b7080efd41cebd.gif)](https://gyazo.com/ae0072d2de194bd659b7080efd41cebd)  
+[![Image from Gyazo](https://i.gyazo.com/fa22da5c9c778b19f2d3d6bebe274704.gif)](https://gyazo.com/fa22da5c9c778b19f2d3d6bebe274704)  
 * ログイン  
-[![Image from Gyazo](https://i.gyazo.com/3cf09aa92a2c675287ebd38e66d5efac.gif)](https://gyazo.com/3cf09aa92a2c675287ebd38e66d5efac)  
+[![Image from Gyazo](https://i.gyazo.com/30b1f4ad33754fa78c25d24c1a39634a.gif)](https://gyazo.com/30b1f4ad33754fa78c25d24c1a39634a)  
 * 伴奏者登録画面  
-[![Image from Gyazo](https://i.gyazo.com/70d288f85712a06dd071888dd5a03ff8.gif)](https://gyazo.com/70d288f85712a06dd071888dd5a03ff8)  
+[![Image from Gyazo](https://i.gyazo.com/4eb5dbd0a038855922fc757a6947dac9.gif)](https://gyazo.com/4eb5dbd0a038855922fc757a6947dac9)  
 
 ## お問い合わせ機能  
 ### お問い合わせ機能は情報を登録している本人以外の詳細にページに移動した際に表示される↓  
@@ -285,7 +285,7 @@
 
 ## 伴奏者へのコメント機能  
 ### 詳細ページにあるコメント欄にコメントをすると名前とコメントが表示される↓  
-[![Image from Gyazo](https://i.gyazo.com/05f1f4db8bea8a59604df03ff9525173.gif)](https://gyazo.com/05f1f4db8bea8a59604df03ff9525173)  
+[![Image from Gyazo](https://i.gyazo.com/3ef4acc9f8bd0d576021ae4b61f851f2.gif)](https://gyazo.com/3ef4acc9f8bd0d576021ae4b61f851f2)  
 
 # 開発状況  
   * Ruby/RubyonRails/MySQL/Github/AWS/VisualStudioCode/HTML/CSS  
